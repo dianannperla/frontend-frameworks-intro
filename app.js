@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     sections.forEach(section => {
         section.setAttribute('tabindex', '0');
         section.addEventListener('click', () => {
-            alert(`You clicked on the section about ${section.querySelector('h2').innerText}.`);
+            const sectionTitle = section.querySelector('h2').innerText;
+            alert(`You clicked on the section about ${sectionTitle}.`);
         });
         section.addEventListener('keypress', (event) => {
             // Trigger click event on Enter key
