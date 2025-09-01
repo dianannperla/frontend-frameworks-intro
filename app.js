@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         section.setAttribute('tabindex', '0');
+        section.setAttribute('role', 'button'); // Added role attribute for accessibility
         section.addEventListener('click', () => {
             const sectionTitle = section.querySelector('h2').innerText;
             alert(`You clicked on the section about ${sectionTitle}.`);
