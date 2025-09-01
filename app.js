@@ -4,5 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
         section.addEventListener('click', () => {
             alert(`You clicked on the section about ${section.querySelector('h2').innerText}.`);
         });
+        section.addEventListener('keypress', (event) => {
+            // Trigger click event on Enter key
+            if (event.key === 'Enter') {
+                section.click();
+            }
+        });
     });
 });
